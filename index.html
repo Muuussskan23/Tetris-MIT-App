@@ -1,36 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tetris App Download</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris Game Download</title>
   <style>
     body {
-      background: #0B1D51;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0B1D51, #2980b9);
       color: #fff;
-      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
       text-align: center;
-      padding: 2rem;
     }
-    a.download {
-      display: inline-block;
-      padding: 10px 20px;
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .download-btn {
+      padding: 15px 30px;
       background: #8CCDEB;
-      color: #000;
+      color: #333;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      font-size: 18px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
-    img {
-      margin-top: 20px;
+
+    .download-btn:hover {
+      background: #2980b9;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    .qr {
+      margin-top: 30px;
+    }
+
+    .qr img {
+      border: 4px solid #fff;
+      border-radius: 10px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>Download Tetris Game</h1>
-  <p>Click the button below to download the APK:</p>
-  <a class="download" href="Tetris(main).apk" download>Tetris APK</a>
-  <p>Or scan this QR code:</p>
-  <img src="qr.png" alt="QR code to download APK" width="200">
+  <h1>🎮 Tetris Game</h1>
+  <p>Get ready for some classic block fun! Download and play now.</p>
+  <a class="download-btn" href="Tetris.apk" download>⬇ Download Tetris.apk</a>
+
+  <div class="qr">
+    <p>Or scan this QR code:</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://Muuussskan23.github.io/Tetris-MIT-App/Tetris.apk" alt="Tetris APK QR code">
+  </div>
 </body>
 </html>
